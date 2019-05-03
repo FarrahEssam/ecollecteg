@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="/images/fav.png"/>
+    <link rel="icon" href="/images/fav.png"/>    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand " href="#"  >
+            <img src="/images/logo.png" alt="" onclick="location.href = '\\'">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="home">Home
+                        <span class="sr-only" >(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="request">Request</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<br>
+<br>
+
+<div class="container register bg-light ">
+    <div class="row ">
+        <div class="col-md-12  ">
+            <center>
+            <ul class="nav nav-tabs nav-justified " id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="font-weight: bold;font-size: 22px">individual</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="font-weight: bold;font-size: 22px">company</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading ">Apply as an individual</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="fni" class="form-control" placeholder="First Name *" value="" />
+                                <span id='fnis' style="display:none;color: red">please enter first name</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="lni" class="form-control" placeholder="Last Name *" value="" />
+                                <span id='lnis' style="display:none;color: red">please enter last name</span>
+
+                            </div>
+
+                            <div class="form-group" >
+                                <select class="form-control" id="gi">
+                                    <option class="hidden"  selected disabled>Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                                <span id='gis' style="display:none;color: red">please select a gender</span>
+
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="eti">
+                                    <option class="hidden"  selected disabled>E-waste type</option>
+                                    <option>Television</option>
+                                    <option>Computer</option>
+                                    <option>Printer</option>
+                                    <option>Cellphone</option>
+                                    <option>Batteries</option>
+                                    <option>Fax machine</option>
+                                    <option>Refrigerator</option>
+                                    <option>Microwave</option>
+                                    <option>Receiver</option>
+                                </select>
+                                <span id='etis' style="display:none;color: red">please select ewaste type</span>
+
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <select class="form-control" id="ai">
+                                    <option class="hidden"  selected disabled>Your age range</option>
+                                    <option>under 18</option>
+                                    <option>18-24</option>
+                                    <option>24-30</option>
+                                    <option>30-40</option>
+                                    <option>over 40</option>
+                                </select>
+                                <span id='ais' style="display:none;color: red">please select age range</span>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="phi" minlength="10" maxlength="11" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                <span id='phis' style="display:none;color: red">please enter your phone</span>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="addi" class="form-control" placeholder="address *" value="" />
+                                <span id='addis' style="display:none;color: red">please enter your address</span>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="eqi" class="form-control " placeholder="E-waste Quantity *" value="" />
+                                <span id='eqis' style="display:none;color: red">please enter the quantity</span>
+
+                            </div>
+                            <input type="submit" class="btnRegister btn btn-primary btn-md"  value="Request" onclick="FormValidation()"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h3  class="register-heading">Apply as a company</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Company's name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="address *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option class="hidden"  selected disabled>E-waste type</option>
+                                    <option>Television</option>
+                                    <option>Computer</option>
+                                    <option>Printer</option>
+                                    <option>Cellphone</option>
+                                    <option>Batteries</option>
+                                    <option>Fax machine</option>
+                                    <option>Refrigerator</option>
+                                    <option>Microwave</option>
+                                    <option>Receiver</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option class="hidden"  selected disabled>Company type</option>
+                                    <option>Private</option>
+                                    <option>Governmental</option>
+                                    <option>Non-governmental</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" minlength="10" maxlength="11" name="txtEmpPhone" class="form-control" placeholder="Company phone *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" minlength="10" maxlength="11" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control " placeholder="E-waste Quantity *" value="" />
+                            </div>
+                            <input type="submit" class="btnRegister btn btn-primary btn-md"  value="Request" onclick="FormValidation()"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </center>
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+<br><br>
+<!-- Footer -->
+<div>
+    <footer class="page-footer font-small blue fixed-bottom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#">AK</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function FormValidation(){
+        //First Name Validation
+        var fni=document.getElementById('fni').value;
+        var lni=document.getElementById('lni').value;
+        var phi=document.getElementById('phi').value;
+        var addi=document.getElementById('addi').value;
+        var eqi=document.getElementById('eqi').value;
+        var ai=document.getElementById('ai');
+        var eti=document.getElementById('eti');
+        var gi=document.getElementById('gi');
+
+        if(fni == ""){
+            document.getElementById('fni').style.borderColor = "red";
+            document.getElementById('fnis').style.display = "";
+        }else{
+            document.getElementById('fni').style.borderColor = "green";
+            document.getElementById('fnis').style.display = "none";
+
+        }
+
+        if(lni == ""){
+            document.getElementById('lni').style.borderColor = "red";
+            document.getElementById('lnis').style.display = "";
+        }else{
+            document.getElementById('lni').style.borderColor = "green";
+            document.getElementById('lnis').style.display = "none";
+
+        }
+
+        if(phi == ""){
+            document.getElementById('phi').style.borderColor = "red";
+            document.getElementById('phis').style.display = "";
+        }else{
+            document.getElementById('phi').style.borderColor = "green";
+            document.getElementById('phis').style.display = "none";
+
+        }
+
+        if(addi == ""){
+            document.getElementById('addi').style.borderColor = "red";
+            document.getElementById('addis').style.display = "";
+        }else{
+            document.getElementById('addi').style.borderColor = "green";
+            document.getElementById('addis').style.display = "none";
+
+        }
+
+        if(eqi == ""){
+            document.getElementById('eqi').style.borderColor = "red";
+            document.getElementById('eqis').style.display = "";
+        }else{
+            document.getElementById('eqi').style.borderColor = "green";
+            document.getElementById('eqis').style.display = "none";
+
+        }
+
+        if(ai.selectedIndex==0){
+            document.getElementById('ais').style.display = "";
+        }else{
+            document.getElementById('ais').style.display = "none";
+        }
+
+        if(gi.selectedIndex==0){
+            document.getElementById('gis').style.display = "";
+        }else{
+            document.getElementById('gis').style.display = "none";
+        }
+
+        if(eti.selectedIndex==0){
+            document.getElementById('etis').style.display = "";
+        }else{
+            document.getElementById('etis').style.display = "none";
+        }
+
+        var data = {
+            fni: fni,
+            lni: lni,
+            phi: phi,
+            addi: addi,
+            eqi: eqi,
+            ai: ai.value,
+            eti: eti.value,
+            gi: gi.value
+        }
+        $.ajax({
+            type: 'POST',
+            url: '/request',
+            data: data,
+            success: function (data) {
+                //do something with the data via front-end framework
+                if(data === 'done'){}
+            }
+        });
+    }
+</script>
+</body>
+</html>
