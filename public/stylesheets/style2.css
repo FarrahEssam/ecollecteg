@@ -148,7 +148,6 @@ p2{
 
 .aboutusp {
     font-size: 20px;
-    text-align:justify;
 }
 
 
@@ -182,6 +181,7 @@ p2{
     }
 
     .logod {
+        Padding:15px;
         width: 70%;
     }
 
