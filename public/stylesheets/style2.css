@@ -128,7 +128,8 @@ footer {
 
 p,ul {
     color: white;
-    font-size: 20px;
+    font-size: 20px; 
+    text-align:justify;
 }
 
 p2{
@@ -148,6 +149,14 @@ p2{
 
 .aboutusp {
     font-size: 20px;
+}
+.aboutush{
+    font-size: 60px;
+    font-weight: bold;
+}
+.aboutusp{
+    font-size: 30px;
+>>>>>>> origin/master
     text-align:justify;
 }
 
