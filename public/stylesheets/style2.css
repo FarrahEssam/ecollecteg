@@ -153,7 +153,7 @@ p2{
 
 
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
+    /* For mobile phones : */
     [class*="col-"] {
         width: 100%;
     }
