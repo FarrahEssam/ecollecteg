@@ -124,11 +124,11 @@ p,h1,h2{
 }
 
 .aboutush{
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
 }
 .aboutusp{
-    font-size: 35px;
+    font-size: 30px;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
