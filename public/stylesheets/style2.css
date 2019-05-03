@@ -116,6 +116,8 @@ footer {
 p,h1,h2{
     color: white;
     font-size: 20px;
+    text-indent:1em;  
+    text-align:justify;
 }
 
 .expd{
