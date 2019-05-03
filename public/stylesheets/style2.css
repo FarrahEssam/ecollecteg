@@ -108,7 +108,7 @@ footer {
     color: white;
     font-size: 4vw;
     font-weight: bold;
-    padding-left: 15px;
+    padding-left: 30px;
 }
 
 .ewd {
@@ -187,8 +187,9 @@ p2{
     }
 
     .ford {
-Margin-top: 10px;
-Padding-top: 10px;
+        margin-top: 5px;
+        padding-top: 10px;
+        margin-left: -30px;
         top: 10px;
         width: 30%;
         font-size: 12vw;
