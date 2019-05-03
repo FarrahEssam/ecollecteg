@@ -11,6 +11,7 @@
 [class*="col-"] {
     float: left;
 }
+
 [class*="coll-"] {
     float: left;
 }
@@ -78,8 +79,15 @@ footer {
 .col-122 {
     width: 100%;
 }
-.coll-22{    width: 16.66%;}
-.coll-100{    width: 83.33%;}
+
+.coll-22 {
+    width: 8.33%;
+    padding-bottom: 5px;
+}
+
+.coll-100 {
+    width: 91.66%;
+}
 
 .imagem {
     content: url("../images/pcupperr.png");
@@ -109,35 +117,65 @@ footer {
     font-weight: bold;
     margin-left: 30px;
 }
-.wd{
-    position:absolute;z-index: 10;margin-top: -150px; background-color:white ;padding:15px;
+
+.wd {
+    position: absolute;
+    z-index: 10;
+    margin-top: -100px;
+    background-color: white;
+    padding: 15px;
 }
 
-p,h1,h2{
+p,ul {
     color: white;
     font-size: 20px;
 }
 
-.expd{
-    margin-top: 30px;
+p2{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+.expd {
+    margin-top: 5px;
     padding-left: 10px;
 }
 
-.aboutush{
-    font-size: 70px;
+.aboutush {
+    font-size: 50px;
     font-weight: bold;
 }
-.aboutusp{
-    font-size: 35px;
+
+.aboutusp {
+    font-size: 20px;
+    text-align:justify;
 }
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
     }
-    .coll-22{  width: 25%;}
-    .coll-100{  width: 75%;}
-    .expd{margin-top: 10px}
+
+    .coll-22 {
+        width: 16.66%;
+    }
+
+    .coll-100 {
+        width: 83.33%;
+    }
+    p,ul{
+        font-size: 18px;
+    }
+
+    p2{
+        font-size: 30px;
+    }
+
+    .expd {
+        margin-top: 10px
+    }
+
     .imagem {
         content: url("../images/mobupperr.png");
     }
@@ -159,7 +197,8 @@ p,h1,h2{
     .top-left {
         top: 55px;
     }
-    .wd{
+
+    .wd {
         margin-top: 0px;
         position: static;
     }
