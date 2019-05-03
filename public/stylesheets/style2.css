@@ -129,7 +129,6 @@ footer {
 p,ul {
     color: white;
     font-size: 20px; 
-    text-align:justify;
 }
 
 p2{
@@ -182,10 +181,14 @@ p2{
     }
 
     .logod {
+        Padding:15px;
+
         width: 70%;
     }
 
     .ford {
+Margin-top: 10px;
+Padding-top: 10px;
         top: 10px;
         width: 30%;
         font-size: 12vw;
