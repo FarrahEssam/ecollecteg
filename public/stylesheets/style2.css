@@ -115,8 +115,7 @@ footer {
 
 p,h1,h2{
     color: white;
-    font-size: 20px;
-    text-indent:1em;  
+    font-size: 20px; 
     text-align:justify;
 }
 
@@ -131,6 +130,7 @@ p,h1,h2{
 }
 .aboutusp{
     font-size: 30px;
+    text-align:justify;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
