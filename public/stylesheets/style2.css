@@ -211,3 +211,10 @@ p2{
 
 
 
+footer{
+    background: darkgray;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
