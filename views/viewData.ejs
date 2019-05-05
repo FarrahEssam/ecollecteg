@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="/images/fav.png"/>
+    <link rel="icon" href="/images/fav.png"/>
+    <link rel='stylesheet' href='/stylesheets/viewDataCSS.css'/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-light">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand float-left" href="#">
+            <img src="/images/logo.png" alt="" onclick="location.href = '\\'">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="home">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="request">Request</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br>
+<!-- Page Content -->
+
+<div class="tab" style="margin: 10px;">
+    <button class="tablinks active" onclick="openCity(event, 'individual')">Individual</button>
+    <button class="tablinks" onclick="openCity(event, 'company')">Company</button>
+</div>
+
+<div id="individual" style="display: block" class="tabcontent">
+    <div style="overflow-x:auto;">
+        <table id="customers">
+            <tr>
+                <th>Name</th>
+                <th>phone</th>
+                <th>address</th>
+                <th>Gender</th>
+                <th>Age range</th>
+                <th>Ewaste type</th>
+                <th>Ewaste quantity</th>
+                <th>delete</th>
+            </tr>
+
+            <% for(var i = 0; i < individualInfo.length; i++){ %>
+            <tr>
+                <% for(var j = 0; j < individualInfo[i].length; j++){ %>
+                <td>
+                    <% individualInfo[i].FirstName + individualInfo[i].LastName %>
+                </td>
+                <td>
+                    <% individualInfo[i].Gender %>
+                </td>
+                <td>
+                    <% individualInfo[i].EWasteType %>
+                </td>
+                <td>
+                    <% individualInfo[i].EWasteQuantity %>
+                </td>
+                <td>
+                    <% individualInfo[i].AgeRange %>
+                </td>
+                <td>
+                    <% individualInfo[i].PhoneNumber %>
+                </td>
+                <td>
+                    <% individualInfo[i].Address %>
+                </td>
+                <td>
+                    <button class="btnnn" onclick="del(<%=individualInfo[i].ID %> , 'I')"><i class="fa fa-trash"></i> Delete</button>
+                </td>
+                <% } %>
+            </tr>
+            <% } %>
+
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>
+                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>
+                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<div id="company" class="tabcontent">
+    <div style="overflow-x:auto;">
+        <table id="customers">
+            <tr>
+                <th>Company Name</th>
+                <th>Employee Name</th>
+                <th>Company Type</th>
+                <th>Ewaste Type</th>
+                <th>Ewaste Quantity</th>
+                <th>Company Phone</th>
+                <th>Employee Phone</th>
+                <th>Address</th>
+                <th>Delete</th>
+
+            </tr>
+
+            <% for(var i = 0; i < companyInfo.length; i++){ %>
+                <tr>
+                    <% for(var j = 0; j < companyInfo[i].length; j++){ %>
+                        <td>
+                            <% companyInfo[i].CName %>
+                        </td>
+                        <td>
+                            <% companyInfo[i].EName %>
+                        </td>
+                        <td>
+                            <% companyInfo[i].CompanyType %>
+                        </td>
+                        <td>
+                            <% companyInfo[i].EWasteType %>
+                        </td>
+                        <td>
+                            <% companyInfo[i].EWasteQuantity %>
+                        </td>
+                        <td>
+                            <% companyInfo[i].CPhoneNumber %>
+                        </td>
+                        <td>
+                            <% companyInfo[i].EPhoneNumber %>
+                        </td>
+                        <td>
+                            <% companyInfo[i].Address %>
+                        </td>
+                        <td>
+                            <button class="btnnn" onclick="del(<%=companyInfo[i].ID %> , 'C')"><i class="fa fa-trash"></i> Delete</button>
+                        </td>
+                    <% } %>
+                </tr>
+            <% } %>
+
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>
+                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>
+                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/javascripts/data.js"></script>
+</body>
+</html>

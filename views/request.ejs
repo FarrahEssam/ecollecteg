@@ -146,12 +146,15 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" id="cnc" class="form-control" placeholder="Company's name *" value="" />
+                                <span id='cncs' style="display:none;color: red">please enter company name</span>
                             </div>
                             <div class="form-group">
-                                <input type="text" id="nc" class="form-control" placeholder="Your name *" value="" />
+                                <input type="text" id="enc" class="form-control" placeholder="Your name *" value="" />
+                                <span id='encs' style="display:none;color: red">please enter your name</span>
                             </div>
                             <div class="form-group">
                                 <input type="text" id="addc" class="form-control" placeholder="address *" value="" />
+                                <span id='addcs' style="display:none;color: red">please enter company address</span>
                             </div>
                             <div class="form-group">
                                 <select class="form-control" id="etc">
@@ -166,8 +169,8 @@
                                     <option>Microwave</option>
                                     <option>Receiver</option>
                                     <option>other</option>
-
                                 </select>
+                                <span id='etcs' style="display:none;color: red">please choose ewaste type</span>
                             </div>
                             <div class="form-group otherc">
 
@@ -181,19 +184,22 @@
                                     <option>Private</option>
                                     <option>Governmental</option>
                                     <option>Non-governmental</option>
-
                                 </select>
+                                <span id='ctcs' style="display:none;color: red">please choose company type</span>
                             </div>
                             <div class="form-group">
                                 <input type="text" id="cphc" minlength="10" maxlength="11" name="txtEmpPhone" class="form-control" placeholder="Company phone *" value="" />
+                                <span id='cphcs' style="display:none;color: red">please enter company phone</span>
                             </div>
                             <div class="form-group">
-                                <input type="text" id="phc" minlength="10" maxlength="11" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                <input type="text" id="ephc" minlength="10" maxlength="11" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                <span id='ephcs' style="display:none;color: red">please enter your phone</span>
                             </div>
                             <div class="form-group">
                                 <input type="number" id="eqc" class="form-control " placeholder="E-waste Quantity *" value="" />
+                                <span id='eqcs' style="display:none;color: red">please enter ewaste quantity</span>
                             </div>
-                            <input type="submit" class="btnRegister btn btn-primary btn-md"  value="Request" onclick="window.location.href= 'home'"/>
+                            <input type="submit" class="btnRegister btn btn-primary btn-md"  value="Request" onclick="FormValidationc()"/>
                         </div>
                     </div>
                     </form>
