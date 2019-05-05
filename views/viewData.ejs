@@ -62,44 +62,45 @@
         <table id="customers">
             <tr>
                 <th>Name</th>
+                <th>Age range</th>
+                <th>Gender</th>
                 <th>phone</th>
                 <th>address</th>
-                <th>Gender</th>
-                <th>Age range</th>
                 <th>Ewaste type</th>
                 <th>Ewaste quantity</th>
                 <th>delete</th>
             </tr>
 
             <% for(var i = 0; i < individualInfo.length; i++){ %>
-            <tr>
-                <td>
-                    <%= individualInfo[i].FirstName%> <%= individualInfo[i].LastName%>
-                </td>
-                <td>
-                    <%= individualInfo[i].Gender %>
-                </td>
-                <td>
-                    <%= individualInfo[i].EWasteType %>
-                </td>
-                <td>
-                    <%= individualInfo[i].EWasteQuantity %>
-                </td>
-                <td>
-                    <%= individualInfo[i].AgeRange %>
-                </td>
-                <td>
-                    <%= individualInfo[i].PhoneNumber %>
-                </td>
-                <td>
-                    <%= individualInfo[i].Address %>
-                </td>
-                <td>
-                    <button class="btnnn" onclick="del(<%= individualInfo[i].ID %> , 'I')"><i class="fa fa-trash"></i> Delete</button>
-                </td>
-            </tr>
+                <tr>
+                    <td>
+                        <%= individualInfo[i].FirstName %> <%= individualInfo[i].LastName %>
+                    </td>
+                    <td>
+                        <%= individualInfo[i].AgeRange %>
+                    </td>
+                    <td>
+                        <%= individualInfo[i].Gender %>
+                    </td>
+                    <td>
+                        <%= individualInfo[i].PhoneNumber %>
+                    </td>
+                    <td>
+                        <%= individualInfo[i].Address %>
+                    </td>
+                    <td>
+                        <%= individualInfo[i].EWasteType %>
+                    </td>
+                    <td>
+                        <%= individualInfo[i].EWasteQuantity %>
+                    </td>
+                    <td>
+                        <button class="btnnn" onclick="del(<%= individualInfo[i].ID %> , 'I')"><i
+                                    class="fa fa-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
             <% } %>
-
 
         </table>
     </div>
@@ -123,33 +124,35 @@
 
             <% for(var i = 0; i < companyInfo.length; i++){ %>
                 <tr>
-                        <td>
-                            <%= companyInfo[i].CName %>
-                        </td>
-                        <td>
-                            <%= companyInfo[i].EName %>
-                        </td>
-                        <td>
-                            <%= companyInfo[i].CompanyType %>
-                        </td>
-                        <td>
-                            <%= companyInfo[i].EWasteType %>
-                        </td>
-                        <td>
-                            <%= companyInfo[i].EWasteQuantity %>
-                        </td>
-                        <td>
-                            <%= companyInfo[i].CPhoneNumber %>
-                        </td>
-                        <td>
-                            <%= companyInfo[i].EPhoneNumber %>
-                        </td>
-                        <td>
-                            <%= companyInfo[i].Address %>
-                        </td>
-                        <td>
-                            <button class="btnnn" onclick="del(<%=companyInfo[i].ID %> , 'C')"><i class="fa fa-trash"></i> Delete</button>
-                        </td>
+                    <td>
+                        <%= companyInfo[i].CName %>
+                    </td>
+                    <td>
+                        <%= companyInfo[i].EName %>
+                    </td>
+                    <td>
+                        <%= companyInfo[i].CompanyType %>
+                    </td>
+                    <td>
+                        <%= companyInfo[i].EWasteType %>
+                    </td>
+                    <td>
+                        <%= companyInfo[i].EWasteQuantity %>
+                    </td>
+                    <td>
+                        <%= companyInfo[i].CPhoneNumber %>
+                    </td>
+                    <td>
+                        <%= companyInfo[i].EPhoneNumber %>
+                    </td>
+                    <td>
+                        <%= companyInfo[i].Address %>
+                    </td>
+                    <td>
+                        <button class="btnnn" onclick="del(<%= companyInfo[i].ID %> , 'C')"><i class="fa fa-trash"></i>
+                            Delete
+                        </button>
+                    </td>
                 </tr>
             <% } %>
 
