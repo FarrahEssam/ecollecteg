@@ -101,6 +101,23 @@ router.get('/view', function(req, res){
     });
 });
 
+router.post('/deletByID', function(req, res){
+    const ID = req.body.ID;
+    const Type = req.body.Type;
+
+    let query;
+
+    if(Type === 'I'){
+        query = "DELETE FROM Individual WHERE ID='" + ID + "';";
+    }
+    else {
+        query = "DELETE FROM Company WHERE ID='" + ID + "';";
+    }
+
+    con.query(query);
+    res.send("done");
+});
+
 router.get('/about', function(req, res, next) {
     res.render('about', { title: 'E-collect' });
 });
