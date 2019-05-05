@@ -39,7 +39,7 @@ function queries(){
         ");";
 }
 
-router.post('/request', function(req, res) {
+router.post('/individualInfo', function(req, res) {
     console.log(req.body);
     const FirstName = req.body.FirstName;
     const LastName = req.body.LastName;
@@ -53,6 +53,25 @@ router.post('/request', function(req, res) {
     const query = "INSERT INTO Individual(FirstName, LastName, Gender, EWasteType, EWasteQuantity, AgeRange, " +
         "PhoneNumber, Address) VALUES ('" + FirstName + "', '" + LastName + "', '" + Gender + "', '" + EWasteType + "'," +
         "'" + EWasteQuantity + "', '" + AgeRange + "', '" + PhoneNumber + "', '" + Address + "');";
+
+    mysqlm.execute();
+    res.send("done");
+});
+
+router.post('/companyInfo', function(req, res) {
+    console.log(req.body);
+    const CName = req.body.CName;
+    const EName = req.body.EName;
+    const CompanyType = req.body.CompanyType;
+    const EWasteType = req.body.EWasteType;
+    const EWasteQuantity = req.body.EWasteQuantity;
+    const CPhoneNumber = req.body.CPhoneNumber;
+    const EPhoneNumber = req.body.EPhoneNumber;
+    const Address = req.body.Address;
+
+    const query = "INSERT INTO Individual(CName, EName, CompanyType, EWasteType, EWasteQuantity, CPhoneNumber, " +
+        "EPhoneNumber, Address) VALUES ('" + CName + "', '" + EName + "', '" + CompanyType + "', '" + EWasteType + "'," +
+        "'" + EWasteQuantity + "', '" + CPhoneNumber + "', '" + EPhoneNumber + "', '" + Address + "');";
 
     mysqlm.execute();
     res.send("done");
