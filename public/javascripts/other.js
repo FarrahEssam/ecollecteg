@@ -262,7 +262,7 @@ function FormValidationc() {
             CPhoneNumber: cphc,
             EPhoneNumber: ephc,
             CompanyType: ctc.value,
-            EWasteType: etc.value,
+            EWasteType: oc,
             EWasteQuantity: eqc
         }
     } else {
@@ -273,7 +273,7 @@ function FormValidationc() {
             CPhoneNumber: cphc,
             EPhoneNumber: ephc,
             CompanyType: ctc.value,
-            EWasteType: oc,
+            EWasteType:etc.value ,
             EWasteQuantity: eqc
         }
     }
