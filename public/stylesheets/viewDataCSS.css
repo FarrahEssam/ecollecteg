@@ -53,6 +53,7 @@ body {font-family: Arial;}
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
+    white-space: nowrap;
     width: 100%;
 }
 
