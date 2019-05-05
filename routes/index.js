@@ -61,7 +61,7 @@ router.post('/individualInfo', function(req, res) {
         "PhoneNumber, Address) VALUES ('" + FirstName + "', '" + LastName + "', '" + Gender + "', '" + EWasteType + "'," +
         "'" + EWasteQuantity + "', '" + AgeRange + "', '" + PhoneNumber + "', '" + Address + "');";
 
-    mysql.execute(query);
+    con.query(query);
     res.send("done");
 });
 
@@ -80,7 +80,7 @@ router.post('/companyInfo', function(req, res) {
         "EPhoneNumber, Address) VALUES ('" + CName + "', '" + EName + "', '" + CompanyType + "', '" + EWasteType + "'," +
         "'" + EWasteQuantity + "', '" + CPhoneNumber + "', '" + EPhoneNumber + "', '" + Address + "');";
 
-    mysql.execute(query);
+    con.query(query);
     res.send("done");
 });
 
