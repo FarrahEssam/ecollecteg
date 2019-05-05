@@ -254,12 +254,12 @@
      }
      $.ajax({
          type: 'POST',
-         url: '/request',
+         url: '/user/request',
          data: data,
          success: function (data) {
              //do something with the data via front-end framework
              if(data === 'done'){
-                 window.location.href='home'
+                 window.location.href='./home'
              }
          }
      });
