@@ -1,10 +1,10 @@
-var mysql = require('mysql');
+const mysql = require('mysql');
 
-exports.addTable = (sql)=>{
-    var con = mysql.createConnection({
+exports.execute = (sql)=>{
+    const con = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "1234",
+        password: "root1234",
         database: "ecollect"
     });
 
