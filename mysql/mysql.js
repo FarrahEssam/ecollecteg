@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-exports.execute = (sql)=>{
+exports.execute = (sql) => {
     const con = mysql.createConnection({
         host: "localhost",
         user: "root",
@@ -8,13 +8,13 @@ exports.execute = (sql)=>{
         database: "ecollect"
     });
 
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    con.query(sql, function (err, result) {
+    con.connect(function (err) {
         if (err) throw err;
-        console.log("query executed");
+        console.log("Connected!");
+        con.query(sql, function (err, result) {
+            if (err) throw err;
+            console.log("query executed");
+        });
     });
-});
 };
 

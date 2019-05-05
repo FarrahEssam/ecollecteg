@@ -1,6 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const mysql = require('../mysql/mysql');
+const mysql = require('mysql');
+
+const con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "root1234",
+    database: "ecollect"
+});
 
 
 /* GET home page. */
@@ -54,7 +61,7 @@ router.post('/individualInfo', function(req, res) {
         "PhoneNumber, Address) VALUES ('" + FirstName + "', '" + LastName + "', '" + Gender + "', '" + EWasteType + "'," +
         "'" + EWasteQuantity + "', '" + AgeRange + "', '" + PhoneNumber + "', '" + Address + "');";
 
-    mysql.execute();
+    mysql.execute(query);
     res.send("done");
 });
 
@@ -73,7 +80,7 @@ router.post('/companyInfo', function(req, res) {
         "EPhoneNumber, Address) VALUES ('" + CName + "', '" + EName + "', '" + CompanyType + "', '" + EWasteType + "'," +
         "'" + EWasteQuantity + "', '" + CPhoneNumber + "', '" + EPhoneNumber + "', '" + Address + "');";
 
-    mysql.execute();
+    mysql.execute(query);
     res.send("done");
 });
 
@@ -81,6 +88,18 @@ router.post('/companyInfo', function(req, res, next){
     console.log(req.body)
 });
 
+router.get('/view', function(req, res){
+    const query = "SELECT * FROM Individual;SELECT * FROM Company;";
+
+    con.query(query, [2, 1], function (error, results) {
+        if (error) {
+            throw error;
+        }
+        console.log(results[0]);
+        console.log(results[1]);
+        res.render('viewData', { title: 'E-collect' , individualInfo: results[0], companyInfo:results[1]});
+    });
+});
 
 router.get('/about', function(req, res, next) {
     res.render('about', { title: 'E-collect' });
