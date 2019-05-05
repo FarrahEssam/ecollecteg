@@ -98,6 +98,7 @@ router.get('/view', function(req, res){
         console.log(results[0]);
         console.log(results[1]);
         res.render('viewData', { title: 'E-collect' , individualInfo: results[0], companyInfo:results[1]});
+        //res.render('viewData', { title: 'E-collect' , individualInfo: results[0], companyInfo:results[1]});
     });
 });
 
