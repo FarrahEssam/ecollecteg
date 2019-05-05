@@ -15,7 +15,7 @@ router.get('/request', function(req, res, next) {
 router.post('/request', function(req, res, next) {
     console.log(req.body);
     var sql = "INSERT INTO customers (name, address) VALUES ('andrew','andrew')";
-    mysqlm.addTable(sql);
+   // mysqlm.addTable(sql);
 
     res.send("done");
 });
