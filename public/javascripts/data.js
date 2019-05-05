@@ -7,7 +7,7 @@ function del(id, type) {
         success: function (data) {
             //do something with the data via front-end framework
             if (data === 'done') {
-                window.location.href = '/request'
+                window.location.href = '/view'
             }
         }
     });

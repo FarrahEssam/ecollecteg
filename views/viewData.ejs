@@ -73,61 +73,33 @@
 
             <% for(var i = 0; i < individualInfo.length; i++){ %>
             <tr>
-                <% for(var j = 0; j < individualInfo[i].length; j++){ %>
                 <td>
-                    <% individualInfo[i].FirstName + individualInfo[i].LastName %>
+                    <%= individualInfo[i].FirstName%> <%= individualInfo[i].LastName%>
                 </td>
                 <td>
-                    <% individualInfo[i].Gender %>
+                    <%= individualInfo[i].Gender %>
                 </td>
                 <td>
-                    <% individualInfo[i].EWasteType %>
+                    <%= individualInfo[i].EWasteType %>
                 </td>
                 <td>
-                    <% individualInfo[i].EWasteQuantity %>
+                    <%= individualInfo[i].EWasteQuantity %>
                 </td>
                 <td>
-                    <% individualInfo[i].AgeRange %>
+                    <%= individualInfo[i].AgeRange %>
                 </td>
                 <td>
-                    <% individualInfo[i].PhoneNumber %>
+                    <%= individualInfo[i].PhoneNumber %>
                 </td>
                 <td>
-                    <% individualInfo[i].Address %>
+                    <%= individualInfo[i].Address %>
                 </td>
                 <td>
-                    <button class="btnnn" onclick="del(<%=individualInfo[i].ID %> , 'I')"><i class="fa fa-trash"></i> Delete</button>
+                    <button class="btnnn" onclick="del(<%= individualInfo[i].ID %> , 'I')"><i class="fa fa-trash"></i> Delete</button>
                 </td>
-                <% } %>
             </tr>
             <% } %>
 
-            <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>
-                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
-                </td>
-
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>
-                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
-                </td>
-
-            </tr>
 
         </table>
     </div>
@@ -151,69 +123,39 @@
 
             <% for(var i = 0; i < companyInfo.length; i++){ %>
                 <tr>
-                    <% for(var j = 0; j < companyInfo[i].length; j++){ %>
                         <td>
-                            <% companyInfo[i].CName %>
+                            <%= companyInfo[i].CName %>
                         </td>
                         <td>
-                            <% companyInfo[i].EName %>
+                            <%= companyInfo[i].EName %>
                         </td>
                         <td>
-                            <% companyInfo[i].CompanyType %>
+                            <%= companyInfo[i].CompanyType %>
                         </td>
                         <td>
-                            <% companyInfo[i].EWasteType %>
+                            <%= companyInfo[i].EWasteType %>
                         </td>
                         <td>
-                            <% companyInfo[i].EWasteQuantity %>
+                            <%= companyInfo[i].EWasteQuantity %>
                         </td>
                         <td>
-                            <% companyInfo[i].CPhoneNumber %>
+                            <%= companyInfo[i].CPhoneNumber %>
                         </td>
                         <td>
-                            <% companyInfo[i].EPhoneNumber %>
+                            <%= companyInfo[i].EPhoneNumber %>
                         </td>
                         <td>
-                            <% companyInfo[i].Address %>
+                            <%= companyInfo[i].Address %>
                         </td>
                         <td>
                             <button class="btnnn" onclick="del(<%=companyInfo[i].ID %> , 'C')"><i class="fa fa-trash"></i> Delete</button>
                         </td>
-                    <% } %>
                 </tr>
             <% } %>
-
-            <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>
-                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
-                </td>
-
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>
-                    <button class="btnnn"><i class="fa fa-trash"></i> Delete</button>
-                </td>
-
-            </tr>
 
         </table>
     </div>
 </div>
-
 
 <script>
     function openCity(evt, cityName) {

@@ -76,7 +76,8 @@ router.post('/companyInfo', function (req, res) {
     const EPhoneNumber = req.body.EPhoneNumber;
     const Address = req.body.Address;
 
-    const query = "INSERT INTO Individual(CName, EName, CompanyType, EWasteType, EWasteQuantity, CPhoneNumber, " +
+    console.log(CName, "    ", EName);
+    const query = "INSERT INTO Company(CName, EName, CompanyType, EWasteType, EWasteQuantity, CPhoneNumber, " +
         "EPhoneNumber, Address) VALUES ('" + CName + "', '" + EName + "', '" + CompanyType + "', '" + EWasteType + "'," +
         "'" + EWasteQuantity + "', '" + CPhoneNumber + "', '" + EPhoneNumber + "', '" + Address + "');";
 
@@ -89,15 +90,24 @@ router.post('/companyInfo', function (req, res, next) {
 });
 
 router.get('/view', function (req, res) {
-    const query = "SELECT * FROM Individual;SELECT * FROM Company;";
+    // SELECT * FROM Company;
+    const query1 = "SELECT * FROM Individual;";
+    const query2 = "SELECT * FROM Company;";
 
-    con.query(query, [2, 1], function (error, results) {
-        if (error) {
-            throw error;
+    con.query(query1, function (err1, results1) {
+        if (err1) {
+            throw err1;
+        } else {
+            console.log(results1);
+            con.query(query2, function (err2, results2) {
+                if (err2) {
+                    throw err1;
+                } else {
+                    console.log(results2);
+                    res.render('viewData', {title: 'E-collect', individualInfo: results1, companyInfo: results2});
+                }
+            });
         }
-        console.log(results[0]);
-        console.log(results[1]);
-        res.render('viewData', { title: 'E-collect' , individualInfo: results[0], companyInfo:results[1]});
     });
 });
 
