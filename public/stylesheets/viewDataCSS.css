@@ -58,7 +58,7 @@ body {font-family: Arial;}
 }
 
 #customers td, #customers th {
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
     padding: 8px;
 }
 
