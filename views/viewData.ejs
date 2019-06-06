@@ -61,6 +61,7 @@
     <div style="overflow-x:auto;">
         <table id="customers">
             <tr>
+                <th>#</th>
                 <th>Name</th>
                 <th>Age range</th>
                 <th>Gender</th>
@@ -73,6 +74,9 @@
 
             <% for(var i = 0; i < individualInfo.length; i++){ %>
                 <tr>
+                    <td>
+                        <%=i+1%>
+                    </td>
                     <td>
                         <%= individualInfo[i].FirstName %> <%= individualInfo[i].LastName %>
                     </td>
@@ -95,8 +99,8 @@
                         <%= individualInfo[i].EWasteQuantity %>
                     </td>
                     <td>
-                        <button class="btnnn" onclick="del(<%= individualInfo[i].ID %> , 'I')"><i
-                                    class="fa fa-trash"></i> Delete
+                        <button class="btnnn" onclick="del(<%= individualInfo[i].ID %> , 'I')">
+                            <i class="fa fa-trash"></i> Delete
                         </button>
                     </td>
                 </tr>
@@ -110,6 +114,7 @@
     <div style="overflow-x:auto;">
         <table id="customers">
             <tr>
+                <th>#</th>
                 <th>Company Name</th>
                 <th>Employee Name</th>
                 <th>Company Type</th>
@@ -123,6 +128,9 @@
 
             <% for(var i = 0; i < companyInfo.length; i++){ %>
                 <tr>
+                    <td>
+                        <%=i+1%>
+                    </td>
                     <td>
                         <%= companyInfo[i].CName %>
                     </td>

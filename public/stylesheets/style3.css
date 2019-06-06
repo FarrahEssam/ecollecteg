@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+.rowww::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+[class*="coll-"] {
+    float: left;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+    background-color: black;
+}
+
+.header {
+    padding: 15px;
+}
+
+
+footer {
+
+    background-color: darkgray;
+}
+
+/* For desktop: */
+.col-11 {
+    width: 8.33%;
+}
+
+.col-22 {
+    width: 16.66%;
+}
+
+.col-33 {
+    width: 25%;
+}
+
+.col-44 {
+    width: 33.33%;
+}
+
+.col-55 {
+    width: 41.66%;
+}
+
+.col-66 {
+    width: 50%;
+}
+
+.col-77 {
+    width: 58.33%;
+}
+
+.col-88 {
+    width: 66.66%;
+}
+
+.col-99 {
+    width: 75%;
+}
+
+.col-100 {
+    width: 83.33%;
+}
+
+.col-111 {
+    width: 91.66%;
+}
+
+.col-122 {
+    width: 100%;
+}
+
+.coll-22 {
+    width: 8.33%;
+    padding-bottom: 5px;
+}
+
+.coll-100 {
+    width: 91.66%;
+}
+
+.imagem {
+    content: url("../images/aboutimage.jpg");
+}
+
+.logo {
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+.top-left {
+    position: absolute;
+    top: 7vw;
+
+}
+
+.ford {
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.ewd {
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.wd {
+
+    margin-top: 80px;
+    background-color: white;
+    padding: 15px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+p2{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+rflc{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+.expd {
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.aboutush {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.aboutusp {
+    font-size: 20px;
+}
+.icl{
+    background-color: black;
+    padding: 30px;
+}
+.icll{
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones : */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .coll-22 {
+        width: 16.66%;
+    }
+
+    .coll-100 {
+        width: 83.33%;
+    }
+    p{
+        font-size: 18px;
+    }
+
+    p2{
+        font-size: 30px;
+    }
+    .aboutush {
+        font-size: 30px;
+    }
+
+    .expd {
+        margin-top: 10px
+    }
+
+    .imagem {
+        content: url("../images/aboutimage.jpg");
+        padding: 0px;
+    }
+
+    .icl{
+        background-color: black;
+        padding: 0px;
+    }
+    .icll{
+        margin-top: 20px;
+    }
+
+    .logod {
+        Padding:15px;
+
+        width: 70%;
+    }
+
+    .ford {
+        margin-top: 5px;
+        padding-top: 10px;
+        margin-left: -20px;
+        top: 10px;
+        width: 30%;
+        font-size: 12vw;
+    }
+
+    .ewd {
+        font-size: 10vw;
+    }
+
+    .top-left {
+        top: 55px;
+    }
+
+    .wd {
+        margin-top: 80px;
+        position: static;
+    }
+}
+
+
+
+footer{
+    background: darkgray;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}

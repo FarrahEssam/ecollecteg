@@ -15,7 +15,7 @@ function FormValidationi() {
     }
 
 
-    if (fni == "") {
+    if (fni === "") {
         document.getElementById('fni').style.borderColor = "red";
         document.getElementById('fnis').style.display = "";
         return false;
@@ -25,7 +25,7 @@ function FormValidationi() {
 
     }
 
-    if (lni == "") {
+    if (lni === "") {
         document.getElementById('lni').style.borderColor = "red";
         document.getElementById('lnis').style.display = "";
         return false;
@@ -36,7 +36,7 @@ function FormValidationi() {
 
     }
 
-    if (phi == "") {
+    if (phi === ""|| isNaN(phi) || phi.length<10 ) {
         document.getElementById('phi').style.borderColor = "red";
         document.getElementById('phis').style.display = "";
         return false;
@@ -47,7 +47,7 @@ function FormValidationi() {
 
     }
 
-    if (addi == "") {
+    if (addi === "") {
         document.getElementById('addi').style.borderColor = "red";
         document.getElementById('addis').style.display = "";
         return false;
@@ -57,7 +57,7 @@ function FormValidationi() {
 
     }
 
-    if (eqi == "") {
+    if (eqi === "" || parseInt(eqi,10)<=0) {
         document.getElementById('eqi').style.borderColor = "red";
         document.getElementById('eqis').style.display = "";
         return false;
@@ -92,7 +92,7 @@ function FormValidationi() {
         document.getElementById('etis').style.display = "none";
     }
     if (other) {
-        if (oi == "") {
+        if (oi === "") {
             document.getElementById('oi').style.borderColor = "red";
             document.getElementById('ois').style.display = "";
             return false;
@@ -160,7 +160,7 @@ function FormValidationc() {
     }
 
 
-    if (cnc == "") {
+    if (cnc === "") {
         document.getElementById('cnc').style.borderColor = "red";
         document.getElementById('cncs').style.display = "";
         return false;
@@ -170,7 +170,7 @@ function FormValidationc() {
 
     }
 
-    if (enc == "") {
+    if (enc === "") {
         document.getElementById('enc').style.borderColor = "red";
         document.getElementById('encs').style.display = "";
         return false;
@@ -181,7 +181,7 @@ function FormValidationc() {
 
     }
 
-    if (addc == "") {
+    if (addc === "") {
         document.getElementById('addc').style.borderColor = "red";
         document.getElementById('addcs').style.display = "";
         return false;
@@ -192,7 +192,7 @@ function FormValidationc() {
 
     }
 
-    if (cphc == "") {
+    if (cphc === "" || isNaN(cphc) || cphc.length<10) {
         document.getElementById('cphc').style.borderColor = "red";
         document.getElementById('cphcs').style.display = "";
         return false;
@@ -202,7 +202,7 @@ function FormValidationc() {
 
     }
 
-    if (ephc == "") {
+    if (ephc === "" || isNaN(ephc) || ephc.length<10) {
         document.getElementById('ephc').style.borderColor = "red";
         document.getElementById('ephcs').style.display = "";
         return false;
@@ -213,7 +213,7 @@ function FormValidationc() {
 
     }
 
-    if (eqc == "") {
+    if (eqc === "" || parseInt(eqc,10)<=0) {
         document.getElementById('eqc').style.borderColor = "red";
         document.getElementById('eqcs').style.display = "";
         return false;
@@ -241,7 +241,7 @@ function FormValidationc() {
     }
 
     if (other) {
-        if (oc == "") {
+        if (oc === "") {
             document.getElementById('oc').style.borderColor = "red";
             document.getElementById('ocs').style.display = "";
             return false;
@@ -283,7 +283,6 @@ function FormValidationc() {
         url: '/companyInfo',
         data: data2,
         success: function (data) {
-            //do something with the data via front-end framework
             if (data === 'done') {
                 window.location.href = './home'
             }
