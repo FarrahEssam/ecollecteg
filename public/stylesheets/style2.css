@@ -129,7 +129,7 @@ footer {
 .wbd {
     position: absolute;
     z-index: 12;
-    margin-top: 500px;
+    margin-top: 350px;
     margin-left: 7vw;
     padding: 15px;
 }
@@ -162,9 +162,10 @@ p2{
     border-radius: 4px;
     background-color: #FFFFFF;
     border: none;
-    color: black;
+    color: #212529;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: 900;
     padding: 20px;
     width: 300px !important;
     transition: all 0.5s;
