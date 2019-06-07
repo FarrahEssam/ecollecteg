@@ -36,7 +36,7 @@ function FormValidationi() {
 
     }
 
-    if (phi === ""|| isNaN(phi) || phi.length<10 ) {
+    if (phi === ""|| isNaN(phi) || phi.length<10 || phi.length>11 ) {
         document.getElementById('phi').style.borderColor = "red";
         document.getElementById('phis').style.display = "";
         return false;
@@ -192,7 +192,7 @@ function FormValidationc() {
 
     }
 
-    if (cphc === "" || isNaN(cphc) || cphc.length<10) {
+    if (cphc === "" || isNaN(cphc) || cphc.length<10 || cphc.length>11) {
         document.getElementById('cphc').style.borderColor = "red";
         document.getElementById('cphcs').style.display = "";
         return false;
@@ -202,7 +202,7 @@ function FormValidationc() {
 
     }
 
-    if (ephc === "" || isNaN(ephc) || ephc.length<10) {
+    if (ephc === "" || isNaN(ephc) || ephc.length<10 || ephc.length>11) {
         document.getElementById('ephc').style.borderColor = "red";
         document.getElementById('ephcs').style.display = "";
         return false;
