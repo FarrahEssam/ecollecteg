@@ -160,12 +160,12 @@ p2{
 
 .button {
     border-radius: 4px;
-    background-color: #fdfdfe;
+    background-color: #fdc122;
     border: none;
-    color: #212529;
+    color: black;
     text-align: center;
     font-size: 32px;
-    font-weight: 900;
+    font-weight: 700;
     padding: 20px;
     width: 300px !important;
     transition: all 0.5s;
