@@ -35,6 +35,9 @@ footer {
 .col-11 {
     width: 8.33%;
 }
+.col-1231 {
+    width: 8.33%;
+}
 
 .col-22 {
     width: 16.66%;
@@ -81,12 +84,13 @@ footer {
 }
 
 .coll-22 {
-    width: 8.33%;
+    width: 16.66%;
     padding-bottom: 5px;
+    font-size:30px;
 }
 
 .coll-100 {
-    width: 91.66%;
+    width: 83.33%;
 }
 
 .imagem {
@@ -127,7 +131,7 @@ footer {
 
 p {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 p2{
@@ -156,24 +160,34 @@ rflc{
 }
 .icl{
     background-color: black;
-    padding: 30px;
+    padding: 0 50px 50px 50px;
 }
 .icll{
     margin-top: 100px;
 }
 
-@media only screen and (max-width: 768px) {
+.enlogo{
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1180px) {
+    .enlogo{
+        width: 50%;
+        margin-top: 10px;
+    }
     /* For mobile phones : */
     [class*="col-"] {
         width: 100%;
     }
 
     .coll-22 {
-        width: 16.66%;
+        width: 100%;
     }
 
     .coll-100 {
-        width: 83.33%;
+        width: 100%;
+        horiz-align: center;
     }
     p{
         font-size: 18px;
