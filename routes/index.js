@@ -89,7 +89,7 @@ router.post('/companyInfo', function (req, res, next) {
     console.log(req.body)
 });
 
-router.get('/view', function (req, res) {
+router.get('/asdferuihfuiehrgnbfdsvpqowierbxcmvdhg', function (req, res) {
     // SELECT * FROM Company;
     const query1 = "SELECT * FROM Individual;";
     const query2 = "SELECT * FROM Company;";
