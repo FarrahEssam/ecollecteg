@@ -1,13 +1,45 @@
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
+const mysqlConfig = require('../mysql/mysqlConfig');
 
 const con = mysql.createConnection({
-    host: "db4free.net",
-    user: "ecollectun",
-    password: "ecollectpassword",
-    database: "ecollect"
+    host: mysqlConfig.host,
+    user: mysqlConfig.user,
+    password: mysqlConfig.password,
+    database: mysqlConfig.database
 });
+
+function queries() {
+    const individualTableQuery = "CREATE TABLE Individual (\n" +
+        "    ID int NOT NULL AUTO_INCREMENT,\n" +
+        "    FirstName varchar(255),\n" +
+        "    LastName varchar(255),\n" +
+        "    Gender varchar(255),\n" +
+        "    EWasteType varchar(255), \n" +
+        "    EWasteQuantity int, \n" +
+        "    AgeRange varchar(255), \n" +
+        "    PhoneNumber varchar(255), \n" +
+        "    Address varchar(255),\n" +
+        "    PRIMARY KEY (ID)" +
+        ");";
+    const companyTableQuery = "CREATE TABLE Company (\n" +
+        "    ID int NOT NULL AUTO_INCREMENT,\n" +
+        "    CName varchar(255),\n" +
+        "    EName varchar(255),\n" +
+        "    CompanyType varchar(255),\n" +
+        "    EWasteType varchar(255), \n" +
+        "    EWasteQuantity int, \n" +
+        "    CPhoneNumber varchar(255), \n" +
+        "    EPhoneNumber varchar(255), \n" +
+        "    Address varchar(255),\n" +
+        "    PRIMARY KEY (ID)" +
+        ");";
+
+    //con.query(individualTableQuery);
+    //con.query(companyTableQuery);
+    //console.log("database created");
+}
 
 
 /* GET home page. */
@@ -19,32 +51,7 @@ router.get('/request', function (req, res, next) {
     res.render('request', {title: 'E-collect'});
 });
 
-function queries() {
-    const individualTableQuery = "CREATE TABLE Individual (\n" +
-        "    ID int NOT NULL AUTO_INCREMENT,\n" +
-        "    FirstName varchar(30),\n" +
-        "    LastName varchar(30),\n" +
-        "    Gender varchar(10),\n" +
-        "    EWasteType varchar(255), \n" +
-        "    EWasteQuantity int, \n" +
-        "    AgeRange varchar(10), \n" +
-        "    PhoneNumber varchar(15), \n" +
-        "    Address varchar(255),\n" +
-        "    PRIMARY KEY (ID)" +
-        ");";
-    const companyTableQuery = "CREATE TABLE Company (\n" +
-        "    ID int NOT NULL AUTO_INCREMENT,\n" +
-        "    CName varchar(50),\n" +
-        "    EName varchar(50),\n" +
-        "    CompanyType varchar(20),\n" +
-        "    EWasteType varchar(255), \n" +
-        "    EWasteQuantity int, \n" +
-        "    CPhoneNumber varchar(15), \n" +
-        "    EPhoneNumber varchar(15), \n" +
-        "    Address varchar(255),\n" +
-        "    PRIMARY KEY (ID)" +
-        ");";
-}
+
 
 router.post('/individualInfo', function (req, res) {
     console.log(req.body);
