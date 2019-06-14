@@ -22,13 +22,8 @@ html {
     padding: 15px;
 }
 
-
-
-
-
 footer {
-
-    background-color: darkgray;
+    background-color: white;
 }
 
 /* For desktop: */
@@ -53,7 +48,7 @@ footer {
 }
 
 footer{
-    background: darkgray;
+    background: white;
     width: 100%;
     height: 50px;
     position: relative;

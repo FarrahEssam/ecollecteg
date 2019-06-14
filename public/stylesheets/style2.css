@@ -27,8 +27,7 @@ html {
 
 
 footer {
-
-    background-color: darkgray;
+    background-color: white;
 }
 .social:hover {
     -webkit-transform: scale(1.1);
